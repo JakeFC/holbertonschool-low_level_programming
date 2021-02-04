@@ -4,10 +4,11 @@
  * main - prints text to cmd line
  *Return: 0
  */
-int main(void)
+int main()
 {
-	char a[60] = ("\"Programming is like building a multilingual puzzle");
+	char str[60] = ("\"Programming is like building a multilingual puzzle");
 
-	puts(a);
+	puts(str);
+
 	return (0);
 }
