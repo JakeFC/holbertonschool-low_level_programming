@@ -7,19 +7,21 @@
 int main(void)
 {
 	int n;
-	int t;
-	int o;
 
-	o = (n % 10 + '0');
-	t = ((n /10) + '0');
-	for (n = 1 ; n <= 99 ; n++)
+	for (n = 1; ((n / 10) + '0') < ((n % 10) + '0'); n++)
 	{
-		if (t < o)
+		while (n <= 89)
 		{
-			putchar(t);
-			putchar(o);
+			{
+			putchar((n / 10) + '0');
+			putchar((n % 10) + '0');
+			n++;
+			}
+			if (n < 90)
+			{
 			putchar(',');
 			putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
