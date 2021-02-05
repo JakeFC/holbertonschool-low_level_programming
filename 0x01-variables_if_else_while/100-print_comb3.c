@@ -8,7 +8,7 @@ int main(void)
 {
 	int n;
 
-	for (n=1; n <= 89; n++)
+	for (n = 1; n <= 89; n++)
 	{
 		if ((n / 10) < (n % 10))
 		{
