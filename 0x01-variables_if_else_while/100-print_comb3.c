@@ -9,16 +9,15 @@ int main(void)
 	int n;
 	int t;
 	int o;
-	int c;
 
-	o = n % 10;
-	t = (n - o) / 10;
-	c = 10 * o + t;
+	o = (n % 10 + '0');
+	t = ((n /10) + '0');
 	for (n = 1 ; n <= 99 ; n++)
 	{
-		if (t != o && (n != c || (n == c && t < o)))
+		if (t < o)
 		{
-			putchar(n);
+			putchar(t);
+			putchar(o);
 			putchar(',');
 			putchar(' ');
 		}
