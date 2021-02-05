@@ -4,6 +4,7 @@
 
 /**
  *main- prints whether the int is positive
+ *Return: 0
  */
 int main(void)
 {
