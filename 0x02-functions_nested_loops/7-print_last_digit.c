@@ -1,3 +1,5 @@
+#include "holberton.h"
+
 /**
  * print_last_digit - prints the last digit of a number
  * @a: is input
@@ -7,14 +9,9 @@ int print_last_digit(int a)
 {
 	int b;
 
+	b = a % 10;
 	if (a < 0)
-	{
-		b = (a % 10) * -1;
-	}
-	else
-	{
-		b = a % 10;
-	}
+		b = b * -1;
 
 	_putchar(b + '0');
 	return (b);
