@@ -1,16 +1,17 @@
+#include "holberton.h"
+
 /**
  * print_last_digit - prints the last digit of a #
- * @c: is input
+ * @a: is input
  * Return: absolute value of a
  */
-int print_last_digit(int c)
+int print_last_digit(int a)
 {
-	int a;
+	int c = a % 10;
 
-	if (c < 0)
-		a = (c * -1) % 10;
-	else
-		a = c % 10;
-	_putchar(a + '0');
-	return (a);
+	if (a < 0)
+		c = a * -1;
+
+	putchar(c + '0');
+	return (c);
 }
