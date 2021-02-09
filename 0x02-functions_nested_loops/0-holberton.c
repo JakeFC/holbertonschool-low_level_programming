@@ -6,11 +6,11 @@
  */
 int main(void)
 {
-	char *c = "Holberton";
+	char *a = "Holberton";
 
-	while (*c)
+	while (*a)
 	{
-	_putchar(*c++);
+	_putchar(*a++);
 	}
 	_putchar('\n');
 	return (0);
