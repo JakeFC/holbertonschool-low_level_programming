@@ -4,7 +4,7 @@
  * add - adds 2 integer inputs
  * Return: the result of a + b
  */
-int add(int, int)
+int add(int a, int b)
 {
 	int a;
 	int b;
