@@ -22,18 +22,18 @@ void times_table(void)
 				d = 0;
 				while (d < 2)
 				{
-				_putchar(' ');
-				if (((a * b) / 10 + 0) >= 1)
-				{
-					_putchar(a * (b + 1) / 10 + '0');
+					_putchar(' ');
+					if (((a * b) / 10 + 0) >= 1)
+					{
+						_putchar(a * (b + 1) / 10 + '0');
+						d++;
+					}
 					d++;
-				}
-				d++;
 				}
 			}
 			b++;
 		}
 		_putchar('\n');
-			a++;
+		a++;
 	}
 }
