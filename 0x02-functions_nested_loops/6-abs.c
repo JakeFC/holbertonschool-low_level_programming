@@ -1,15 +1,15 @@
-#include "holberton.h"
-#include <stdlib.h>
-
 /**
  * _abs - prints the absolute value of an int
- * Return: the value of int
- * c is input
- * a is abs of c
+ * @c: is input
+ * Return: the absolute value of int
  */
 int _abs(int c)
 {
-	int a = abs(c);
+	int a;
 
+	if (c < 0)
+		a = (c * -1);
+	else
+		a = c;
 	return (a);
 }
