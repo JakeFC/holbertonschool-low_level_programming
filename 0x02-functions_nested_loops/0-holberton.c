@@ -1,11 +1,15 @@
-#include <stdio.h>
-
 /**
  *main - prints Holberton
  *Return: 0
  */
 int main(void)
 {
-	puts(Holberton);
+	char* c="Holberton";
+
+	while (*c)
+	{
+	_putchar(*c++);
+	}
+	_putchar('\n');
 	return (0);
 }
