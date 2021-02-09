@@ -7,7 +7,7 @@ void times_table(void)
 {
 	int a;
 	int b;
-	int c;
+	int d;
 
 	a = 0;
 	while (a <= 9)
@@ -19,16 +19,16 @@ void times_table(void)
 			if (b < 9)
 			{
 				putchar(',');
-				c = 0;
-				while (c < 2)
+				d = 0;
+				while (d < 2)
 				{
 				putchar(' ');
 				if (((a * b) / 10 + 0) >= 1)
 				{
 					putchar(a * (b + 1) / 10 + '0');
-					c++;
+					d++;
 				}
-				c++;
+				d++;
 				}
 			}
 			b++;
