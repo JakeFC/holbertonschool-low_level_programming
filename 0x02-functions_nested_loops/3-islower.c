@@ -5,9 +5,7 @@
  * _islower - checks for lowercase
  * Return: 1 or 0, if lower or not
  */
-int _islower(int c);
-
-int _islower(c)
+int _islower(int c)
 {
 	if (islower (c))
 		return (1);
