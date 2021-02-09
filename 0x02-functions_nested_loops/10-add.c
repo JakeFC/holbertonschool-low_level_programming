@@ -1,5 +1,3 @@
-#include "holberton.h"
-
 /**
  * add - adds 2 integer inputs
  * @a: input 1
