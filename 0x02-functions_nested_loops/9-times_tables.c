@@ -15,17 +15,17 @@ void times_table(void)
 		b = 0;
 		while (b <= 9)
 		{
-			putchar(((a * b) % 10) + '0');
+			_putchar(((a * b) % 10) + '0');
 			if (b < 9)
 			{
-				putchar(',');
+				_putchar(',');
 				d = 0;
 				while (d < 2)
 				{
-				putchar(' ');
+				_putchar(' ');
 				if (((a * b) / 10 + 0) >= 1)
 				{
-					putchar(a * (b + 1) / 10 + '0');
+					_putchar(a * (b + 1) / 10 + '0');
 					d++;
 				}
 				d++;
@@ -33,7 +33,7 @@ void times_table(void)
 			}
 			b++;
 		}
-		putchar('\n');
+		_putchar('\n');
 			a++;
 	}
 }
