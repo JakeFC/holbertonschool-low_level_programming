@@ -2,6 +2,7 @@
 
 /**
  *print_sign - prints the sign of a number
+ *@n: integer to check
  *Return: 0, 1, or -1, depending on sign
  */
 int print_sign(int n)
