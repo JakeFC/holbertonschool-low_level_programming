@@ -1,10 +1,9 @@
 #include <stdio.h>
-#include "holberton.h"
 
 /**
  * print_to_98 - prints all numbers n to 98
  * @n: input
- * Return: 0
+ * Return: void
  */
 void print_to_98(int n)
 {
@@ -19,5 +18,4 @@ void print_to_98(int n)
 		n--;
 	}
 	printf("98\n");
-	return (0);
 }
