@@ -1,15 +1,11 @@
-#include "holberton.h"
-#include <ctype.h>
-
 /**
- * _islower - checks for lowercase
+ * _isalpha - checks for uppercase
+ * @c: character to check
  * Return: 1 or 0, if lower or not
  */
-int _isalpha(int c);
-
-int _isalpha(c)
+int _isalpha(int c)
 {
-	if (isalpha (c))
+	if (c > 64 && c < 91)
 		return (1);
 	else
 		return (0);
