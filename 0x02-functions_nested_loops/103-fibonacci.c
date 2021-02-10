@@ -7,10 +7,10 @@
 
 int main(void)
 {
-	long a = 0;
-	long b = 1;
-	long c;
-	long d;
+	long long a = 0;
+	long long b = 1;
+	long long c;
+	long long d;
 	long long e;
 
 	for (d = 1; d <= 50; d++)
