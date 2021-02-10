@@ -8,7 +8,6 @@ void print_times_table(int n)
 {
 	int a;
 	int b;
-	int c;
 	int d;
 	int e;
 
