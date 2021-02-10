@@ -7,18 +7,18 @@
 
 int main(void)
 {
-	int a = 0;
-	int b = 1;
-	int c;
-	int d;
+	long a = 0;
+	long b = 1;
+	long c;
+	long d;
 
 	for (d = 1; d <= 50; d++)
 	{
 		c = a + b;
 		if (d < 50)
-			printf("%d, ", c);
+			printf("%ld, ", c);
 		else
-			printf("%d\n", c);
+			printf("%ld\n", c);
 		a = b;
 		b = c;
 	}
