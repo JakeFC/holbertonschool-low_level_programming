@@ -26,15 +26,15 @@ void print_times_table(int n)
 					while (c < 2)
 					{
 						_putchar(' ');
-						if ((((a * (b + 1) % 100) / 10) >= 1)
+						if (((a * (b + 1)) / 100) >= 1)
 							{
-								_putchar(a * (b + 1) % 100 / 10 + '0');
+								_putchar(a * (b + 1) / 100 + '0');
 									c++;
 							}
 								c++;
 					}
-						if ((a * (b + 1) / 10 >= 1)
-								_putchar(a * (b + 1) / 10 + '0');
+					if ((a * (b + 1) % 100 / 10 >= 1) || (((a * (b + 1)) / 100) >= 1))
+								_putchar(a * (b + 1) % 100 / 10 + '0');
 						    else
 								_putchar(' ');
 				}
