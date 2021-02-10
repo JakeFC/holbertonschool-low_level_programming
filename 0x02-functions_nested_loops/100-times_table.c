@@ -22,26 +22,20 @@ void print_times_table(int n)
 				if (b < n)
 				{
 					_putchar(',');
-					c = 0;
-					while (c < 2)
-					{
+					_putchar(' ');
+					if (((a * (b + 1)) / 100) >= 1)
+						_putchar(a * (b + 1) / 100 + '0');
+					else
 						_putchar(' ');
-						if (((a * (b + 1)) / 100) >= 1)
-							{
-								_putchar(a * (b + 1) / 100 + '0');
-									c++;
-							}
-								c++;
-					}
 					if ((a * (b + 1) % 100 / 10 >= 1) || (((a * (b + 1)) / 100) >= 1))
-								_putchar(a * (b + 1) % 100 / 10 + '0');
-						    else
-								_putchar(' ');
+						_putchar(a * (b + 1) % 100 / 10 + '0');
+					else
+						_putchar(' ');
 				}
-						b++;
+				b++;
 			}
-					_putchar('\n');
-					a++;
+			_putchar('\n');
+			a++;
 		}
 	}
 
