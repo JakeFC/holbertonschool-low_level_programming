@@ -7,11 +7,11 @@
 
 int main(void)
 {
-	long long a = 0;
-	long long b = 1;
-	long long c;
-	long long d;
-	long long e;
+	long a = 0;
+	long b = 1;
+	long c;
+	long d;
+	long e;
 
 	for (d = 1; d <= 50; d++)
 	{
@@ -21,6 +21,6 @@ int main(void)
 		a = b;
 		b = c;
 	}
-	printf("%lld\n", e);
+	printf("%ld\n", e);
 	return (0);
 }
