@@ -18,7 +18,7 @@ int main(void)
 		if (d < 50)
 			printf("%d, ", c);
 		else
-			printf("%d", c);
+			printf("%d\n", c);
 		a = b;
 		b = c;
 	}
