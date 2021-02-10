@@ -2,8 +2,9 @@
 
 /**
  * main - adds all multiples of 3 and 5 below 1024
+ * Return: 0
  */
-void main(void)
+int main(void)
 {
 	int a;
 	int b;
@@ -12,8 +13,9 @@ void main(void)
 	while (a < 1024)
 	{
 		if (a % 3 == 0 || a % 5 == 0)
-			a += b;
+			b += a;
 		a++;
 	}
-	printf('%d/n', b)
+	printf("%d\n", b);
+	return (0);
 }
