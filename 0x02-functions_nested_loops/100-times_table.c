@@ -9,6 +9,8 @@ void print_times_table(int n)
 	int a;
 	int b;
 	int c;
+	int d;
+	int e;
 
 	if (n >= 0 && n <= 15)
 	{
@@ -23,14 +25,11 @@ void print_times_table(int n)
 				{
 					_putchar(',');
 					_putchar(' ');
-					if (((a * (b + 1)) / 100) >= 1)
-						_putchar(a * (b + 1) / 100 + '0');
-					else
-						_putchar(' ');
-					if ((a * (b + 1) % 100 / 10 >= 1) || (((a * (b + 1)) / 100) >= 1))
-						_putchar(a * (b + 1) % 100 / 10 + '0');
-					else
-						_putchar(' ');
+					d = ((a * (b + 1)) / 100);
+					_putchar(d >= 1 ? d + '0' : ' ');
+					e = ((a * (b + 1)) % 100 / 10);
+					_putchar((e >= 1 || d >= 1) ? e + '0' : ' ');
+
 				}
 				b++;
 			}
