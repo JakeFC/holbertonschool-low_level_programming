@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
  * main - prints the sum of all even fibonaccis under 4 mil
@@ -14,13 +13,20 @@ int main(void)
 	long d;
 	long e;
 
-	for (d = 1; d <= 50; d++)
+	for (d = 1; d < 33; d++)
 	{
 		c = a + b;
-		if ((c < 4000000) && (c % 2 == 0))
+		if (c % 2 == 0)
+		{
 			e += c;
-		a = b;
-		b = c;
+			a = b;
+			b = c;
+		}
+		else
+		{
+			a = b;
+			b = c;
+		}
 	}
 	printf("%ld\n", e);
 	return (0);
