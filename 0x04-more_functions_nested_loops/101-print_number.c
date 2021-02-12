@@ -7,40 +7,40 @@
 void print_number(int n)
 {
 	int a, b, c, d, e, f, g, h, i, j;
+	unsigned int nn = n;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		nn = -n;
 	}
-	a = ((n / 1000) % 10) + 48;
-	b = ((n / 100) % 10) + 48;
-	c = ((n / 10) % 10) + 48;
-	d = (n % 10) + 48;
-	e = ((n / 10000) % 10) + 48;
-	f = ((n / 100000) % 10) + 48;
-	g = ((n / 1000000) % 10) + 48;
-	h = ((n / 10000000) % 10) + 48;
-	i = ((n / 100000000) % 10) + 48;
-	j = ((n / 1000000000) % 10) + 48;
-
-	if (n > 999999999)
-		_putchar(j);
-	if (n > 99999999)
-		_putchar(i);
-	if (n > 9999999)
-		_putchar(h);
-	if (n > 999999)
-		_putchar(g);
-	if (n > 99999)
-		_putchar(f);
-	if (n > 9999)
-		_putchar(e);
-	if (n > 999)
-		_putchar(a);
-	if (n > 99)
-		_putchar(b);
-	if (n > 9)
-		_putchar(c);
-	_putchar(d);
+	a = ((nn / 1000) % 10);
+	b = ((nn / 100) % 10);
+	c = ((nn / 10) % 10);
+	d = (nn % 10);
+	e = ((nn / 10000) % 10);
+	f = ((nn / 100000) % 10);
+	g = ((nn / 1000000) % 10);
+	h = ((nn / 10000000) % 10);
+	i = ((nn / 100000000) % 10);
+	j = ((nn / 1000000000) % 10);
+	if (nn > 999999999)
+		_putchar(j + '0');
+	if (nn > 99999998)
+		_putchar(i + '0');
+	if (nn > 9999998)
+		_putchar(h + '0');
+	if (nn > 999998)
+		_putchar(g + '0');
+	if (nn > 99998)
+		_putchar(f + '0');
+	if (nn > 9998)
+		_putchar(e + '0');
+	if (nn > 998)
+		_putchar(a + '0');
+	if (nn > 98)
+		_putchar(b + '0');
+	if (nn > 8)
+		_putchar(c + '0');
+	_putchar(d + '0');
 }
