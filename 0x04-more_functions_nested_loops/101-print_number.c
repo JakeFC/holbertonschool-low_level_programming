@@ -6,7 +6,7 @@
  */
 void print_number(int n)
 {
-	int a, b, c, d, e, f, g, h, i, j, k;
+	int a, b, c, d, e, f, g, h, i, j;
 
 	if (n < 0)
 	{
@@ -23,9 +23,7 @@ void print_number(int n)
 	h = ((n / 10000000) % 10) + 48;
 	i = ((n / 100000000) % 10) + 48;
 	j = ((n / 1000000000) % 10) + 48;
-	k = ((n / 10000000000) % 10) + 48;
-	if (n > 9999999999)
-		_putchar(k);
+
 	if (n > 999999999)
 		_putchar(j);
 	if (n > 99999999)
