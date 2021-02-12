@@ -26,21 +26,21 @@ void print_number(int n)
 	j = ((nn / 1000000000) % 10);
 	if (nn > 999999999)
 		_putchar(j + '0');
-	if (nn > 99999998)
+	if (nn > 99999999)
 		_putchar(i + '0');
-	if (nn > 9999998)
+	if (nn > 9999999)
 		_putchar(h + '0');
-	if (nn > 999998)
+	if (nn > 999999)
 		_putchar(g + '0');
-	if (nn > 99998)
+	if (nn > 99999)
 		_putchar(f + '0');
-	if (nn > 9998)
+	if (nn > 9999)
 		_putchar(e + '0');
-	if (nn > 998)
+	if (nn > 999)
 		_putchar(a + '0');
-	if (nn > 98)
+	if (nn > 99)
 		_putchar(b + '0');
-	if (nn > 8)
+	if (nn > 9)
 		_putchar(c + '0');
 	_putchar(d + '0');
 }
