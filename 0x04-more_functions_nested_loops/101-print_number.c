@@ -6,7 +6,7 @@
  */
 void print_number(int n)
 {
-	int a, b, c, d;
+	int a, b, c, d, e;
 
 	if (n < 0)
 	{
@@ -18,7 +18,13 @@ void print_number(int n)
 	b = ((n / 100) % 10);
 	c = ((n / 10) % 10);
 	d = (n % 10);
+	e = ((n / 10000) % 10);
+	f = ((n / 100000) % 10);
 
+	if (n > 99999)
+		_putchar(f + '0');
+	if (n > 9999)
+		_putchar(e + '0');
 	if (n > 999)
 		_putchar(a + '0');
 	if (n > 99)
