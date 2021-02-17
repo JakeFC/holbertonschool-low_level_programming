@@ -13,10 +13,8 @@ void print_array(int *a, int n)
 	if (n > 0)
 	{
 		for (b = 0; b < n - 1; b++)
-		{
 			printf("%d, ", a[b]);
-		}
 		printf("%d", a[n - 1]);
 	}
-	_putchar('\n');
+	putchar('\n');
 }
