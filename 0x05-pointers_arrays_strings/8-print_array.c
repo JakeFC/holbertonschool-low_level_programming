@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "holberton.h"
 
 /**
@@ -9,12 +10,9 @@ void print_array(int *a, int n)
 {
 	int b;
 
-	for (b = 0; a[b] != a[n]; b++)
+	for (b = 0; b < n - 1; b++)
 	{
-		_putchar(a[b]);
-		_putchar(',');
-		_putchar(' ');
+		printf("%d, ", a[b]);
 	}
-	_putchar(a[n]);
-	_putchar('\n');
+	printf("%d\n", a[b]);
 }
