@@ -8,6 +8,7 @@
 void reverse_array(int *a, int n)
 {
 	int c, t;
+	int m = n;
 
 	n--;
 	for (c = 0; c <= n / 2; c++, n--)
@@ -16,4 +17,5 @@ void reverse_array(int *a, int n)
 		a[c] = a[n];
 		a[n] = t;
 	}
+	a[m - 1] = '\0';
 }
