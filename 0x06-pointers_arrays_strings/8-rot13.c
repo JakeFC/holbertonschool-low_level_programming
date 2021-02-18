@@ -16,8 +16,8 @@ char *rot13(char *s)
 		{
 			if ((b > 64 && b < 78) || (b > 96 && b < 110))
 				s[a] = b + 13;
-			else
-				s[a] = b - 13;
+/*			else
+			s[a] = b - 13;*/
 		}
 	}
 	return (s);
