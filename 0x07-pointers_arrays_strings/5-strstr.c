@@ -10,6 +10,8 @@ char *_strstr(char *haystack, char *needle)
 {
 	unsigned int a, b;
 
+	if (needle[0] == '\0')
+		return (haystack);
 	for (a = 0; haystack[a] != '\0'; a++)
 	{
 		if (haystack[a] == needle[0])
