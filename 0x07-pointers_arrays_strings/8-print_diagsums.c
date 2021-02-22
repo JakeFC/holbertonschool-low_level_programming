@@ -9,7 +9,7 @@
 void print_diagsums(int *a, int size)
 {
 	int b;
-	unsigned sum1, sum2;
+	unsigned int sum1, sum2;
 
 	for (b = 0, sum1 = 0; b < size * size; b += size + 1)
 		sum1 += a[b];
