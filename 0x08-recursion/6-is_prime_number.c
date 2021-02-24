@@ -16,7 +16,6 @@ int is_prime_number(int n)
 /**
  * mult_factors - determines if a number above 1 is prime
  * @a: incrementing variable combined with b to try to find n
- * @b: incrementing variable combined with a to try to find n
  * @n: number to check
  * Return: 1 if n is prime, 0 if not
  */
