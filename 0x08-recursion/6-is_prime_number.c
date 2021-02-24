@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <stdio.h>
 /**
  * is_prime_number - determines if a number is prime
  * @n: number to check
@@ -10,7 +10,7 @@ int is_prime_number(int n)
 /* all numbers below 2 are edge cases and non-prime */
 	if (n < 2)
 		return (0);
-	return (mult_factors(2, 2, n));
+	return (mult_factors(2, n));
 }
 
 /**
@@ -20,28 +20,17 @@ int is_prime_number(int n)
  * @n: number to check
  * Return: 1 if n is prime, 0 if not
  */
-int mult_factors(int a, int b, int n)
+int mult_factors(int a, int n)
 {
-	long int c = a * b;
-
-/* if two numbers above 1 can be multiplied to find n, it is not prime */
-	if (c == n)
+/* if a can be divided out evenly from n, it's not prime */
+	if (n % a == 0)
 		return (0);
 /*
  * once the list of multiplication factors is exhausted,
  * the number must be prime
  */
-	if (a >= n / 2)
+	if (a > n / 2)
 		return (1);
-/*
- * once we've looped through all values of b, reset it and increment
- * a to go again
- */
-	if (c >= n)
-	{
-		b = 2;
-		a++;
-	}
-/* keeps adding iterations to the stack by testing each value of b */
-	return (mult_factors(a, b + 1, n));
+/* keeps adding iterations to the stack by testing each value of a */
+	return (mult_factors(a + 1, n));
 }
