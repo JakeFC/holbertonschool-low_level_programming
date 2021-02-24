@@ -22,7 +22,7 @@ int is_prime_number(int n)
  */
 int mult_factors(int a, int b, int n)
 {
-	int c = a * b;
+	long int c = a * b;
 
 /* if two numbers above 1 can be multiplied to find n, it is not prime */
 	if (c == n)
