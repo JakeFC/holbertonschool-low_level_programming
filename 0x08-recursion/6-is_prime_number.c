@@ -27,10 +27,16 @@ int mult_factors(int a, int b, int n)
 /* if two numbers above 1 can be multiplied to find n, it is not prime */
 	if (c == n)
 		return (0);
-/* once the list of multiplication factors is exhausted, the number must be prime */
-	if (a >= n)
+/*
+ * once the list of multiplication factors is exhausted,
+ * the number must be prime
+ */
+	if (a >= n / 2)
 		return (1);
-/* once we've looped through all values of b, reset it and increment a to go again */
+/*
+ * once we've looped through all values of b, reset it and increment
+ * a to go again
+ */
 	if (c >= n)
 	{
 		b = 2;
