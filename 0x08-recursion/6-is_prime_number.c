@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stdio.h>
+
 /**
  * is_prime_number - determines if a number is prime
  * @n: number to check
