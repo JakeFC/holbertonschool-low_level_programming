@@ -12,5 +12,7 @@ int _square(int x, int n);
 int is_prime_number(int n);
 int mult_factors(int a, int n);
 int is_palindrome(char *s);
+int real_function(int a, int b, char *s);
+int _strlen(int a, char *s);
 
 #endif
