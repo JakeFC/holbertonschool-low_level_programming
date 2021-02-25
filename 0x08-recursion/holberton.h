@@ -14,5 +14,8 @@ int mult_factors(int a, int n);
 int is_palindrome(char *s);
 int real_function(int a, int b, char *s);
 int _strlen(int a, char *s);
+int wildcmp(char *s1, char *s2);
+int wld(int a, int b, char *s1, char *s2);
+int was_star_previously(int b, char *s2);
 
 #endif
