@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c *.c; ar -rc liball.a *.c; ranlib liball.a; rm *.o
+gcc -c *.c; ar -rc liball.a *.o; ralib liball.a
