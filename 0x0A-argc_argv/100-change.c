@@ -20,11 +20,11 @@ int main(int argc, char **argv)
 
 	if (argc != 2)
 	{
-		puts("ERROR");
+		puts("Error");
 		return (1);
 	}
 	c = atoi(argv[1]);
-	if (c <= 0)
+	if (c < 0)
 	{
 		puts("0");
 		return (0);
