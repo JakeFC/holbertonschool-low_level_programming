@@ -12,7 +12,7 @@ char **strtow(char *str)
 	int i, ii, iii, c, b;
 	char **s;
 
-	if (str == NULL)
+	if (str == NULL || str[0] == 00)
 		return (NULL);
 	s = malloc((word_count(str) + 1) * sizeof(char *));
 		if (s == NULL)
