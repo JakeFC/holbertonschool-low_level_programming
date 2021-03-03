@@ -22,6 +22,8 @@ char *argstostr(int ac, char **av)
 		len += _strlen(av[i]);
 	len++;
 	c = malloc(len);
+	if (c == NULL)
+		return (NULL);
 	_strcpy(c, av[0]);
 	for (i = 1; i < ac; i++)
 		_strcpy(c, _strcat(c, av[i]));
