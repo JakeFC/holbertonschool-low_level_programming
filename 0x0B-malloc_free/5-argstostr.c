@@ -12,7 +12,7 @@ char *_strcpy(char *dest, char *src);
  */
 char *argstostr(int ac, char **av)
 {
-	char *c, char *tmp;
+	char *c, *tmp;
 	int i;
 	int len = 0;
 
