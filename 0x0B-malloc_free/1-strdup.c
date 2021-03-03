@@ -4,7 +4,8 @@
 /**
  * _strdup - creates and returns a pointer to a copy of the inputted string
  * @str: string input
- * Return: pointer to copy of str, or NULL if str is NULL or insufficient memory
+ * Return: pointer to copy of str, or NULL if str is NULL or there is
+ * insufficient memory
  */
 char *_strdup(char *str)
 {
