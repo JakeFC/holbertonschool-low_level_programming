@@ -12,10 +12,16 @@ char *str_concat(char *s1, char *s2)
 	char *c;
 	unsigned int a, b, i, ii;
 
-	for (a = 0; s1[a] != 00;)
-		a++;
-	for (b = 0; s2[b] != 00;)
-		b++;
+	if (s1 == NULL)
+		a = 0;
+	else
+		for (a = 0; s1[a] != 00;)
+			a++;
+	if (s2 == NULL)
+		b = 0;
+	else
+		for (b = 0; s2[b] != 00;)
+			b++;
 	c = malloc(a + b + 1);
 	if (c == NULL)
 		return (0);
