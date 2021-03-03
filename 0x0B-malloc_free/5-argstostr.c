@@ -1,8 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
 int _strlen(char *s);
-char *str_concat(char *s1, char *s2);
-char *_strcpy(char *dest, char *src);
 
 /**
  * argstostr - concatenates all the arguments of a program
@@ -12,64 +10,28 @@ char *_strcpy(char *dest, char *src);
  */
 char *argstostr(int ac, char **av)
 {
-	char *c, *tmp;
-	int i;
+	char *c;
+	int i, ii;
 	int len = 0;
+	int cc = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 		len += _strlen(av[i]);
 	c = malloc(++len);
-	tmp = malloc(len);
-	if (c == NULL || tmp == NULL)
-		return (NULL);
-	_strcpy(c, av[0]);
-	for (i = 1; i < ac; i++)
-	{
-		_strcpy(tmp, str_concat(c, av[i]));
-		_strcpy(c, tmp);
-		free(tmp);
-	}
-	for (i = 0; c[i] != '\0';)
-		i++;
-	c[i] = '\n';
-	c[++i] = 00;
-	return (c);
-}
-
-/**
- * str_concat - creates a copy of s1 with s2 added to the end
- * @s1: string input
- * @s2: second string input
- * Return: pointer to new string, or 0 if insufficient memory
- */
-char *str_concat(char *s1, char *s2)
-{
-	char *c;
-	unsigned int a, b, i, ii;
-
-	if (s1 == NULL)
-		a = 0;
-	else
-		for (a = 0; s1[a] != 00;)
-			a++;
-	if (s2 == NULL)
-		b = 0;
-	else
-		for (b = 0; s2[b] != 00;)
-			b++;
-	c = malloc(a + b + 2);
 	if (c == NULL)
-		return (0);
-	for (i = 0; i < a; i++)
-		c[i] = s1[i];
-	c[i++] = '\n';
-	for (ii = 0; i < (a + b + 1); i++, ii++)
-		c[i] = s2[ii];
-	c[i] = 00;
+		return (NULL);
+	for (i = 0; i < ac; i++)
+	{
+		for (ii = 0; av[i][ii] != 00; ii++, cc++)
+			c[cc] = av[i][ii];
+	c[cc++] = '\n';
+	}
+	c[cc] = 00;
 	return (c);
 }
+
 
 /**
  * _strlen - returns the length of a string
@@ -85,19 +47,4 @@ int _strlen(char *s)
 		a++;
 	return (a);
 
-}
-/**
- * *_strcpy - copies a string to another variable
- * @dest: destination variable
- * @src: string source
- * Return: pointer to dest
- */
-char *_strcpy(char *dest, char *src)
-{
-	int a;
-
-	for (a = 0; src[a] != '\0'; a++)
-		dest[a] = src[a];
-	dest[a] = '\0';
-	return (dest);
 }
