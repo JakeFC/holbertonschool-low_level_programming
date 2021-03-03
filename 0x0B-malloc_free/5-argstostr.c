@@ -12,7 +12,7 @@ char *_strcpy(char *dest, char *src);
  */
 char *argstostr(int ac, char **av)
 {
-	char *c;
+	char *c, char *tmp;
 	int i;
 	int len = 0;
 
@@ -21,11 +21,16 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 		len += _strlen(av[i]);
 	c = malloc(++len);
-	if (c == NULL)
+	tmp = malloc(len);
+	if (c == NULL || tmp == NULL)
 		return (NULL);
 	_strcpy(c, av[0]);
 	for (i = 1; i < ac; i++)
-		_strcpy(c, str_concat(c, av[i]));
+	{
+		_strcpy(tmp, str_concat(c, av[i]));
+		_strcpy(c, tmp);
+		free(tmp);
+	}
 	for (i = 0; c[i] != '\0';)
 		i++;
 	c[i] = '\n';
