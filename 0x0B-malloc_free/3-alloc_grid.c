@@ -5,20 +5,21 @@
  * are all 0
  * @width: width of array
  * @height: height of array
- * Return: pointer to array, or 0 on failure/ nonexistent dimension
+ * Return: pointer to array, or NULL on failure/ nonexistent dimension
  */
 int **alloc_grid(int width, int height)
 {
 	int **arr;
 	int *a;
-	int i, ii;
+	int i, ii, size;
 
 	if (width < 1 || height < 1)
 		return (NULL);
-	arr = (int **)malloc(sizeof(int *) * height + (sizeof(int) * width));
-	a = (int *)(arr + height);
+	size = sizeof(int *) * height + (sizeof(int) * width * height);
+	arr = (int **)malloc(size);
 	if (arr == NULL)
 		return (NULL);
+	a = (int *)(arr + height);
 	for (i = 0; i < height; i++)
 		arr[i] = (a + width * i);
 	for (i = 0; i < height; i++)
