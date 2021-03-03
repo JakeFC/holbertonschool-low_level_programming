@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * alloc_grid - allocates a 2d array of integers with given dimensions which are
- * all 0
+ * alloc_grid - allocates a 2d array of integers with given dimensions which
+ * are all 0
  * @width: width of array
  * @height: height of array
  * Return: pointer to array, or 0 on failure/ nonexistent dimension
