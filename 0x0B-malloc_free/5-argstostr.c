@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdlib.h>
 int _strlen(char *s);
-char *_strcat(char *dest, char *src);
+char *str_concat(char *s1, char *s2);
 char *_strcpy(char *dest, char *src);
 
 /**
@@ -20,13 +20,12 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 		len += _strlen(av[i]);
-	len++;
-	c = malloc(len);
+	c = malloc(++len);
 	if (c == NULL)
 		return (NULL);
 	_strcpy(c, av[0]);
 	for (i = 1; i < ac; i++)
-		_strcpy(c, _strcat(c, av[i]));
+		_strcpy(c, str_concat(c, av[i]));
 	for (i = 0; c[i] != '\0';)
 		i++;
 	c[i] = '\n';
@@ -35,22 +34,36 @@ char *argstostr(int ac, char **av)
 }
 
 /**
- * _strcat - appends src string to the dest string
- * @dest: destination string
- * @src: string to add
- * Return: pointer to dest
+ * str_concat - creates a copy of s1 with s2 added to the end
+ * @s1: string input
+ * @s2: second string input
+ * Return: pointer to new string, or 0 if insufficient memory
  */
-char *_strcat(char *dest, char *src)
+char *str_concat(char *s1, char *s2)
 {
-	int a, b;
+	char *c;
+	unsigned int a, b, i, ii;
 
-	for (a = 0; dest[a] != '\0';)
-		a++;
-	dest[a++] = '\n';
-	for (b = 0; src[b] != '\0'; b++, a++)
-		dest[a] = src[b];
-	dest[a] = '\0';
-	return (dest);
+	if (s1 == NULL)
+		a = 0;
+	else
+		for (a = 0; s1[a] != 00;)
+			a++;
+	if (s2 == NULL)
+		b = 0;
+	else
+		for (b = 0; s2[b] != 00;)
+			b++;
+	c = malloc(a + b + 2);
+	if (c == NULL)
+		return (0);
+	for (i = 0; i < a; i++)
+		c[i] = s1[i];
+	c[i++] = '\n';
+	for (ii = 0; i < (a + b + 1); i++, ii++)
+		c[i] = s2[ii];
+	c[i] = 00;
+	return (c);
 }
 
 /**
