@@ -69,6 +69,5 @@ int word_count(char *str)
 			c++;
 	}
 	if (c == 0)
-		c++;
 	return (c);
 }
