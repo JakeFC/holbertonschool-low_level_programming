@@ -68,6 +68,5 @@ int word_count(char *str)
 		else if (str[i] != 32 && str[i - 1] == 32)
 			c++;
 	}
-	if (c == 0)
 	return (c);
 }
