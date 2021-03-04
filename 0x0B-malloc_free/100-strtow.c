@@ -43,8 +43,7 @@ char **strtow(char *str)
 				i++;
 			}
 		}
-	s[i] = malloc(sizeof(char));
-	s[i] = 00;
+	s[i] = NULL;
 	return (s);
 }
 
