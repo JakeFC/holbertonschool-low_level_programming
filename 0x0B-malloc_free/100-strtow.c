@@ -26,9 +26,8 @@ char **strtow(char *str)
 			}
 			else if (str[ii] != 32 && str[ii - 1] == 32)
 				b = ii;
-			if (((str[ii + 1] == 32 || str[ii + 1] == 00)
-			     && str[ii] != 32) || (str[ii + 1] == 00
-						   && b == 0))
+			if ((str[ii + 1] == 32 || str[ii + 1] == 00)
+			    && str[ii] != 32)
 			{
 				s[i] = malloc((ii + 2 - b) * sizeof(char));
 				if (s[i] == NULL)
@@ -43,6 +42,11 @@ char **strtow(char *str)
 				s[i][iii] = 00;
 				i++;
 			}
+		}
+		if (b == 0)
+		{
+			s[i] = malloc(sizeof(char))
+				s[i++][0] = 00;
 		}
 	s[i] = NULL;
 	return (s);
