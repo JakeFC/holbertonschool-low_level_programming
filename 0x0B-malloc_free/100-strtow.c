@@ -44,7 +44,10 @@ char **strtow(char *str)
 			}
 		}
 		if (b == 0)
+		{
+			free(s);
 			return (NULL);
+		}
 	s[i] = NULL;
 	return (s);
 }
