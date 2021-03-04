@@ -17,7 +17,7 @@ char **strtow(char *str)
 	s = malloc((word_count(str) + 1) * sizeof(char *));
 		if (s == NULL)
 			return (NULL);
-		for (i = 0, ii = 0; str[ii] != 00; ii++)
+		for (i = 0, ii = 0, b = 0; str[ii] != 00; ii++)
 		{
 			if (ii == 0)
 			{
@@ -26,8 +26,9 @@ char **strtow(char *str)
 			}
 			else if (str[ii] != 32 && str[ii - 1] == 32)
 				b = ii;
-			if ((str[ii + 1] == 32 || str[ii + 1] == 00)
-			    && str[ii] != 32)
+			if (((str[ii + 1] == 32 || str[ii + 1] == 00)
+			     && str[ii] != 32) || (str[ii + 1] == 00
+						   && b == 0))
 			{
 				s[i] = malloc((ii + 2 - b) * sizeof(char));
 				if (s[i] == NULL)
@@ -66,5 +67,7 @@ int word_count(char *str)
 		else if (str[i] != 32 && str[i - 1] == 32)
 			c++;
 	}
+	if (c == 0)
+		c++;
 	return (c);
 }
