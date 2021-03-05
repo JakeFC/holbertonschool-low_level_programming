@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 			}
 		dex1 = ii - 1;
 	}
-	maxs = (sizeof argv[1] + sizeof argv[2]) - 1;
+	maxs = (sizeof(argv[1]) + sizeof(argv[2])) - 1;
 	if (argv[1][0] * argv[2][0] < 10)
 		maxs--;
 	s = malloc(maxs);
@@ -39,7 +39,7 @@ int main(int argc, char **argv)
 	s[1] = 00;
 	for (--ii; ii >= 0; ii--)
 	{
-		dext = sizeof argv[1] - 2;
+		dext = sizeof(argv[1]) - 2;
 		if (argv[1][0] * argv[2][ii] >= 10)
 		dext++;
 		tmp = malloc(dext + 2);
