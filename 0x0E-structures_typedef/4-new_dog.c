@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include "dog.h"
-char *str_return(char *str);
 
 /**
  * new_dog - creates a new dog
@@ -12,18 +11,24 @@ char *str_return(char *str);
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
+	char *n = name;
+	char *o = owner;
 
+	if (!*n)
+		n = NULL;
+	if (!*o)
+		o = NULL;
 	dog = malloc(sizeof(dog_t));
 	if (dog == NULL)
 		return (NULL);
-	dog->name = str_return(name);
+	dog->name = n;
 	if (dog->name == NULL)
 	{
 		free(dog);
 		return (NULL);
 	}
 	dog->age = age;
-	dog->owner = str_return(owner);
+	dog->owner = o;
 	if (dog->owner == NULL)
 	{
 		free(dog->name);
@@ -31,28 +36,4 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	return (dog);
-}
-
-/**
- * str_return - returns a string
- * @str: string input
- * Return: text of string, or NULL if none
- */
-char *str_return(char *str)
-{
-	int i;
-	char *s = NULL;
-
-	if (str == NULL)
-		return (NULL);
-	for (i = 0; str[i] != '\0'; i++)
-		;
-	i++;
-	s = malloc(sizeof(char) * i);
-	if (s == NULL)
-		return (NULL);
-	for (i = 0; str[i] != '\0'; i++)
-		s[i] = str[i];
-	s[i] = 00;
-	return (s);
 }
