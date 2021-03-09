@@ -1,6 +1,6 @@
-#ifndef ABSOLUTE_V
-#define ABSOLUTE_V
+#ifndef FUNCTION_LIKE_MACROS
+#define FUNCTION_LIKE_MACROS
 
-#define ABS(x) ((x) < 0 ? (-x) : (x))
+#define ABS(x) ((x) < (0) ? (-x) : (x))
 
 #endif
