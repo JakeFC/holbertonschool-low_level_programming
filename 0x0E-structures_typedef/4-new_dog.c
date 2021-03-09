@@ -46,6 +46,8 @@ char *str_return(char *str)
 	if (str == NULL)
 		return (NULL);
 	s = malloc(sizeof(str));
+	if (s == NULL)
+		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
 		s[i] = str[i];
 	s[i] = 00;
