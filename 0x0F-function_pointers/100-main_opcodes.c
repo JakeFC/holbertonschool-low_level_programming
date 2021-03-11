@@ -10,7 +10,7 @@
 int main(int argc, char **argv)
 {
 	int size, i;
-	char *ptr = (char *)main;
+	unsigned char *ptr = (unsigned char *)main;
 
 	if (argc != 2)
 	{
