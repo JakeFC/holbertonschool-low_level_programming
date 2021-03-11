@@ -6,11 +6,9 @@
 /**
  * get_op_func - chooses the function to perform the operation
  * @s: operator string
- * @a: int
- * @b: int
  * Return: ponter to the correct function
  */
-int (*get_op_func(char *s))(int a, int b)
+int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
 		{"+", op_add},
