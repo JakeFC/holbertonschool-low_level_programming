@@ -59,7 +59,7 @@ void print_all(const char * const format, ...)
 	while (format && format[args_i])
 	{
 		ops_i = 0;
-		while (ops[ops_i].letter && ops[ops_i].letter[0])
+		while (ops[ops_i].letter)
 		{
 			if (ops[ops_i].letter[0] == format[args_i])
 			{
