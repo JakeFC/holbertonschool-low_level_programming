@@ -32,9 +32,11 @@ void p_float(va_list x)
  */
 void p_str(va_list x)
 {
-	if (!x)
+	char *s = va_arg(x, char *);
+
+	if (!s)
 		printf("(nil)");
-	printf("%s", va_arg(x, char *));
+	printf("%s", s);
 }
 /**
  * print_all - prints anything
