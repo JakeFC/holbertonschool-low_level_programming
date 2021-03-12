@@ -35,7 +35,10 @@ void p_str(va_list x)
 	char *s = va_arg(x, char *);
 
 	if (!s)
+	{
 		printf("(nil)");
+		return;
+	}
 	printf("%s", s);
 }
 /**
