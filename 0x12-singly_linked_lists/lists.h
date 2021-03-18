@@ -5,16 +5,19 @@
 #include <stdlib.h>
 
 /**
- * struct list - a singly linked list
- * @str: string data
- * @len: character length of str
- * @next: pointer to next node of list
+ * struct list_s - singly linked list
+ * @str: string - (malloc'ed string)
+ * @len: length of the string
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
+ * for Holberton project
  */
-typedef struct list
+typedef struct list_s
 {
 	char *str;
-	int len;
-	struct list *next;
+	unsigned int len;
+	struct list_s *next;
 } list_t;
 int _putchar(char c);
 size_t print_list(const list_t *h);
