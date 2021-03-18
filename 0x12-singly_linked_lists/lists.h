@@ -4,6 +4,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * struct list - a singly linked list
+ * @str: string data
+ * @len: character length of str
+ * @next: pointer to next node of list
+ */
+typedef struct list
+{
+	char *str;
+	int len;
+	struct list *next;
+} list_t;
 int _putchar(char c);
 size_t print_list(const list_t *h);
 size_t list_len(const list_t *h);
