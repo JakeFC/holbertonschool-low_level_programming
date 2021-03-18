@@ -17,7 +17,7 @@ int _strlen(char *s)
 }
 /**
  * add_node - adds a new node at the beginning of a list_t list
- * @head: address of first node
+ * @head: pointer to address of first node
  * @str: string to malloc and input into new node
  * Return: address of the new elements, or NULL
  */
