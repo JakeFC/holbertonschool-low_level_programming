@@ -9,5 +9,5 @@ size_t print_list(const list_t *h)
 {
 	if (h == NULL)
 		return (0);
-	return (1 + print_list(h->next));
+	return (1 + list_len(h->next));
 }
