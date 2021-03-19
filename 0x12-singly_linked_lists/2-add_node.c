@@ -1,21 +1,6 @@
 #include "lists.h"
 
 /**
- * _strlen - returns the length of a string
- * @s: string input
- * Return: string length
- */
-int _strlen(char *s)
-{
-	int a;
-
-	a = 0;
-	while (*(s + a) != '\0')
-		a++;
-	return (a);
-
-}
-/**
  * add_node - adds a new node at the beginning of a list_t list
  * @head: pointer to address of first node
  * @str: string to malloc and input into new node
