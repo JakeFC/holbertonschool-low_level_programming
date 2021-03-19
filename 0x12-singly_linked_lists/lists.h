@@ -26,21 +26,5 @@ size_t list_len(const list_t *h);
 list_t *add_node(list_t **head, const char *str);
 list_t *add_node_end(list_t **head, const char *str);
 void free_list(list_t *head);
-int _strlen(char *s);
-/**
- * _strlen - returns the length of a string
- * @s: string input
- * Return: string length
- */
-int _strlen(char *s)
-{
-        int a;
-
-        a = 0;
-        while (*(s + a) != '\0')
-                a++;
-        return (a);
-
-}
 
 #endif

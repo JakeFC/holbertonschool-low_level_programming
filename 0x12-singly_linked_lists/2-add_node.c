@@ -1,5 +1,23 @@
 #include "lists.h"
 
+#ifndef _STRLEN_C
+#define _STRLEN_C
+/**
+ * _strlen - returns the length of a string
+ * @s: string input
+ * Return: string length
+ */
+int _strlen(char *s)
+{
+	int a;
+
+	a = 0;
+	while (*(s + a) != '\0')
+		a++;
+	return (a);
+
+}
+#endif
 /**
  * add_node - adds a new node at the beginning of a list_t list
  * @head: pointer to address of first node
