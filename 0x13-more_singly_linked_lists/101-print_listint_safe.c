@@ -49,6 +49,7 @@ size_t print_listint_safe(const listint_t *head)
 			if (trav == loop && counter == 1)
 			{
 				printf("-> [%p] %d\n", (void *)trav, trav->n);
+				n++;
 				break;
 			}
 			if (trav == loop && counter == 0)
