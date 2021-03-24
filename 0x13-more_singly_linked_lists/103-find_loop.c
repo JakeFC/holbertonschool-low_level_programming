@@ -20,7 +20,7 @@ listint_t *find_listint_loop(listint_t *head)
 			for (hare = head; 1;)
 			{
 				if (tort == hare)
-                                        return (tort);
+					return (tort);
 				tort = tort->next;
 				hare = hare->next;
 			}
