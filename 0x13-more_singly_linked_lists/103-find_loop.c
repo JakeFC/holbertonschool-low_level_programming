@@ -21,6 +21,7 @@ listint_t *find_listint_loop(listint_t *head)
 		while (tort && hare && hare->next)
 		{
 			if (tort == trav)
+			{
 				if (counter == 0)
 					counter = 1;
 				else
@@ -28,6 +29,7 @@ listint_t *find_listint_loop(listint_t *head)
 					check = 1;
 					break;
 				}
+			}
 			if (tort == hare)
 				break;
 			if (!hare->next || !hare->next->next)
