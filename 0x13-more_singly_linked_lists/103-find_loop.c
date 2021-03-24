@@ -13,13 +13,13 @@ listint_t *find_listint_loop(listint_t *head)
 		return (NULL);
 	while (hare && hare->next)
 	{
+		tort = tort->next, hare = hare->next->next;
 		if (!hare)
 			return (NULL);
 		if (tort == hare)
 			for (hare = head; 1; hare = hare->next)
 				if (tort == hare)
 					return (tort);
-		tort = tort->next, hare = hare->next->next;
 	}
 	return (NULL);
 }
