@@ -17,9 +17,13 @@ listint_t *find_listint_loop(listint_t *head)
 		if (!hare)
 			return (NULL);
 		if (tort == hare)
-			for (hare = head; 1; hare = hare->next)
+			for (hare = head; 1;)
+			{
 				if (tort == hare)
-					return (tort);
+                                        return (tort);
+				tort = tort->next;
+				hare = hare->next;
+			}
 	}
 	return (NULL);
 }
