@@ -40,6 +40,8 @@ size_t print_listint_safe(const listint_t *head)
 
 	if (!head)
 		return (0);
+	if (!*head)
+		exit(98);
 	trav = (listint_t *)head;
 	loop = loop_finder(trav);
 	while (trav)
