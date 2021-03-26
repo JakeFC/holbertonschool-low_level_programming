@@ -7,7 +7,7 @@
 int get_endianness(void)
 {
 	int x = 1;
-
 	char *addr = (char *)&x;
+
 	return (addr[0] + '0');
 }
