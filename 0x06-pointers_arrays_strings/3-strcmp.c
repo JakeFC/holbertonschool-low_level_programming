@@ -1,10 +1,11 @@
 #include "holberton.h"
 
 /**
- * _strcmp - compares string length for two strings
+ * _strcmp - compares strings for equality
  * @s1: string input to compare
  * @s2: string input to compare to
- * Return: integer difference, or 0 if none
+ * Return: ascii value difference of first different index
+ * (s1[i] - s2[i]), or 0 if none
  */
 int _strcmp(char *s1, char *s2)
 {
