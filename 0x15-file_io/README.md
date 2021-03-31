@@ -1,0 +1,1 @@
+#using open() read() and write() functions in C
