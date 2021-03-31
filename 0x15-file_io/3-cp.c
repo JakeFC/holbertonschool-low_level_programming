@@ -26,17 +26,15 @@ int main(int argc, char **argv)
 		close(from), exit(99);
 	}
 	for (count = read(from, buf, 1024); count > 0; count = read(from, buf, 1024))
-	{
-		if (count < 0)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-			exit(98);
-		}
 		if (write(to, buf, count) < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			close(from), close(to), exit(99);
 		}
+	if (count < 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
 	}
 	if (close(from) < 0)
 	{
