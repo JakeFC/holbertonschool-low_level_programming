@@ -8,7 +8,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd, count;
+	int fd, count = 0;
 
 	if (!filename)
 		return (-1);
@@ -18,9 +18,10 @@ int create_file(const char *filename, char *text_content)
 	if (!text_content)
 	{
 		close(fd);
-                return (-1);
+		return (-1);
 	}
-	count = sizeof(text_content) - 1;
+	for (; text_content[count]; count++)
+		;
 	if (write(fd, text_content, count) < 0)
 	{
 		close(fd);
