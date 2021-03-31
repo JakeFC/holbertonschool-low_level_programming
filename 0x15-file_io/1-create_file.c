@@ -20,8 +20,7 @@ int create_file(const char *filename, char *text_content)
 		close(fd);
 		return (-1);
 	}
-	for (; text_content[count]; count++)
-		;
+	count = _strlen(text_content);
 	if (write(fd, text_content, count) < 0)
 	{
 		close(fd);
@@ -29,4 +28,19 @@ int create_file(const char *filename, char *text_content)
 	}
 	close(fd);
 	return (1);
+}
+/**
+ * _strlen - finds the length of a string
+ * @str: string input
+ * Return: string length, or 0 on error
+ */
+int _strlen(char *s)
+{
+	int i;
+
+	if (!s)
+		return (0);
+	for (i = 0; s[i]; i++)
+		;
+	return (i);
 }
