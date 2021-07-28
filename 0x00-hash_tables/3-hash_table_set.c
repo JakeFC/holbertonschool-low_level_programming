@@ -22,9 +22,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	}
 	node->key = (char *)malloc(strlen(key));
-	node->key = (char *)key;
+	strcpy(node->key, key);
 	node->value = (char *)malloc(strlen(value));
-	node->value = (char *)value;
+	strcpy(node->value, value);
 	node->next = NULL;
 	index = key_index((unsigned char *)key, ht->size);
 	if (ht->array[index] != NULL)
